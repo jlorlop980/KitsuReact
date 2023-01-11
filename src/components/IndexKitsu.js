@@ -1,6 +1,6 @@
 import React from "react";
-import HeaderKitsu from "./HeaderKitsu.js";
 import IndexMainKitsu from "./IndexMainKitsu.js";
+import HeaderKitsu from "./HeaderKitsu.js";
 import FooterKitsu from "./FooterKitsu.js";
 
 

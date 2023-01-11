@@ -9,7 +9,7 @@ function HeaderKitsu(props) {
     return(
         <header className="header-principal">
         <img src={logo} className="header-principal-logo" />
-        <a href="./index.html" className="header-principal-titulo">KITSU API</a>
+        <a href="/" className="header-principal-titulo">KITSU API</a>
         <nav className="header-principal-nav">
             <ul>
                 <li><a className="header-principal-nav-a" href="./registro.html">usuario<img src={usuario} alt="usuario" className="header-principal-nav-img" /></a></li>

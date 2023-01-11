@@ -1,0 +1,83 @@
+*{
+    font-family:"Quicksand";
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.main-principal{
+    height: 80vh;
+    background-color: #BCD4DE;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-principal-section{
+    display: flex;
+    flex-flow: row;
+    border-radius: 20px;
+    background-color: #585F74;
+    width: 60vw;
+    height: 50vh;
+    justify-content: space-around;
+    color: white;
+}
+
+.main-principal-section-form{
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: left;
+    gap: 3vh;
+    height: 40vh;
+}
+
+.main-principal-section-textarea{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 4vh;
+    height: 40vh;
+}
+
+.main-principal-section-textarea-label{
+    font-size: 1.3rem;
+    padding-top: 2vh;
+    text-align: center;
+}
+
+.main-principal-section-form-input{
+    border: 0;
+    border-bottom: 1px solid #000000;
+    outline: 5;
+    font-size: 1.3rem;
+    color: white;
+    background: #585F74;
+    /*text-align: center*/
+}
+
+.main-pricipal-section-form-mensaje{
+    width: 25vw; 
+    height: 30vh;
+    border: 1px solid #000000;
+    resize: none; 
+}
+
+.main-principal-section-form-label{
+    font-size: 1.3rem;
+    padding-top: 2vh;
+}
+
+.main-principal-section-a{
+   align-self: center;
+   text-align: center;
+   padding-top: 1vh;
+   color: #7CCFB4;
+   background-color: #585F74;
+   height: 6vh;
+   width: 10vw;
+   font-size: 1.5rem;
+   border-radius: 11vh;
+}
+
