@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+*{
+    font-family:"Quicksand";
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.footer-principal{
+    height: 10vh;
+    background-color: #585F74;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.footer-principal-redes{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5vw;
+    padding-left: 2vw;
+    padding-top: 3vh;
+}
+
+.footer-principal-redes-img{
+    max-width: 3vw;
+    max-height: 3vw;
+}
+
+.footer-principal-contacto{
+    color: white;
+    padding-right: 2vw;
+    padding-top: 4vh;
+}
