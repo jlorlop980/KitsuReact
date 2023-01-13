@@ -1,0 +1,29 @@
+
+const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+function App() {
+  const [email, setEmail] = React.useState({
+    error: false,
+    value: ""
+  });
+
+  const handleChange = (e: any) => {
+    // Trim value & convert to lowercase
+    const value = e.target.value.trim().toLowerCase();
+
+    // Test if email is valid
+    const isValidEmail = re.test(value);
+
+    setEmail({
+      value,
+      error: !isValidEmail
+    });
+  };
+
+  return (
+    <>
+      <input placeholder="Email" onChange={handleChange} />
+      {email.error && <p>Please enter a valid email address.</p>}
+    </>
+  );
+}

@@ -1,0 +1,51 @@
+.main-principal-section{
+    border-radius: 20px;
+    gap: 15vh;
+    background-color: #585F74;
+    width: 35vw;
+    height: 45vh;
+}
+
+.main-principal-section-form{
+    color: white;
+    display: flex;
+    width: 35vw;
+    height: 45vh;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    gap: 4vh;
+    padding-bottom: 5vw;
+    justify-content: center;
+}
+
+
+.main-principal-section-form-input{
+    width: 40%;
+    border: 0;
+    border-bottom: 1px solid #000000;
+    outline: 5;
+    font-size: 1.3rem;
+    color: white;
+    background: #585F74;
+    text-align: center;
+    align-self: center;
+}
+
+.main-principal-section-form-label{
+    font-size: 2rem;
+    padding-top: 2vh;
+}
+
+.main-principal-section-a{
+   align-self: center;
+   text-align: center;
+   padding-top: 1vh;
+   color: #7CCFB4;
+   background-color: #585F74;
+   height: 6vh;
+   width: 10vw;
+   font-size: 1.5rem;
+   border-radius: 11vh;
+}
+

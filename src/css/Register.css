@@ -1,0 +1,61 @@
+
+.Rmain-principal{
+    height: 80vh;
+    background-image: url(./../images/bgOpacity.png);
+    background-size: cover;
+    background-color: #BCD4DE;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.Rmain-principal-section{
+    border-radius: 20px;
+    gap: 15vh;
+    background-color: #585F74;
+    width: 35vw;
+    height: 50vh;
+}
+
+.Rmain-principal-section-form{
+    color: white;
+    display: flex;
+    width: 35vw;
+    height: 45vh;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    gap: 3vh;
+}
+
+
+.Rmain-principal-section-form-input{
+    width: 40%;
+    border: 0;
+    border-bottom: 1px solid #000000;
+    outline: 5;
+    font-size: 1.3rem;
+    color: white;
+    background: #585F74;
+    text-align: center;
+    align-self: center;
+} 
+
+.Rmain-principal-section-form-label{
+    font-size: 2rem;
+    padding-top: 2vh;
+}
+
+.Rmain-principal-section-a{
+   align-self: center;
+   text-align: center;
+   padding-top: 1vh;
+   color: #7CCFB4;
+   background-color: #585F74;
+   height: 6vh;
+   width: 10vw;
+   font-size: 1.5rem;
+   border-radius: 11vh;
+}

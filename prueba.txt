@@ -1,0 +1,25 @@
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+const Producto = () => {
+  const [anime, setAnime] = useState({});
+  const { id } = useParams();
+
+  useEffect(() => {
+    const obtenerAnime = async () => {
+      const data = await fetch(`https://kitsu.io/api/edge/anime/${id}`);
+      const animeDetail = await data.json();
+      setAnime(animeDetail.data);
+       await console.log(animeDetail);
+    };
+    obtenerAnime();
+  }, [id]);
+  
+  return (
+    <div>
+        <p>{console.log(anime.attributes)}</p>
+    </div>
+  );
+};
+
+export default Producto;

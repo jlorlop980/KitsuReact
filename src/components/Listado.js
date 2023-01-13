@@ -1,19 +1,16 @@
 import React from "react";
 import TiraAnimeCrs from "./TiraAnimeCrs.js";
 import TiraMangaCrs from "./TiraMangaCrs";
-import HeaderKitsu from "./HeaderKitsu.js";
-import FooterKitsu from "./FooterKitsu.js";
-
+import TiraAnimePrueba from "./TiraAnimePrueba.js";
 
 function Listado(){
 
     return(
-    <>
-        <HeaderKitsu />
-        <TiraAnimeCrs />
+    <>  
+        <h2>Trending</h2>
+        <TiraAnimePrueba />
         <TiraMangaCrs />
         <a href="/">Volver</a>
-        <FooterKitsu />
     </>
     );
 }

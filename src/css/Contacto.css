@@ -4,17 +4,20 @@
     padding:0;
     box-sizing: border-box;
 }
-.main-principal{
+
+.Cmain-principal{
     height: 80vh;
+    background-image: url(./../images/bgOpacity.png);
+    background-size: cover;
     background-color: #BCD4DE;
     display: flex;
-    flex-flow: column wrap;
-    gap: 5vh;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    gap: 5vw;
 }
 
-.main-principal-section{
+.Cmain-principal-section{
     display: flex;
     flex-flow: row;
     border-radius: 20px;
@@ -25,7 +28,7 @@
     color: white;
 }
 
-.main-principal-section-form{
+.Cmain-principal-section-form{
     color: white;
     display: flex;
     flex-flow: column nowrap;
@@ -34,20 +37,20 @@
     height: 40vh;
 }
 
-.main-principal-section-textarea{
+.Cmain-principal-section-textarea{
     display: flex;
     flex-flow: column wrap;
     gap: 4vh;
     height: 40vh;
 }
 
-.main-principal-section-textarea-label{
+.Cmain-principal-section-textarea-label{
     font-size: 1.3rem;
     padding-top: 2vh;
     text-align: center;
 }
 
-.main-principal-section-form-input{
+.Cmain-principal-section-form-input{
     border: 0;
     border-bottom: 1px solid #000000;
     outline: 5;
@@ -57,19 +60,19 @@
     /*text-align: center*/
 }
 
-.main-pricipal-section-form-mensaje{
+.Cmain-pricipal-section-form-mensaje{
     width: 25vw; 
     height: 30vh;
     border: 1px solid #000000;
     resize: none; 
 }
 
-.main-principal-section-form-label{
+.Cmain-principal-section-form-label{
     font-size: 1.3rem;
     padding-top: 2vh;
 }
 
-.main-principal-section-a{
+.Cmain-principal-section-a{
    align-self: center;
    text-align: center;
    padding-top: 1vh;
