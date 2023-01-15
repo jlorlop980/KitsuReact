@@ -7,6 +7,7 @@ import FooterKitsu from "./components/FooterKitsu.js";
 import Login from "./components/Login.js";
 import Register from "./components/Register.js";
 import Producto from "./components/Producto.js";
+import SearchPage from "./components/SearchPage.js";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/producto/:id" element={<Producto />} />
+            <Route path="/producto/:isAnime/:id" element={<Producto />} />
+            <Route path="/search" element={<SearchPage />} />
         </Routes>
       <FooterKitsu />
       </Router>

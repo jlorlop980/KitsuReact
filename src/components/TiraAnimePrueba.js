@@ -23,14 +23,10 @@ const TiraAnimePrueba = () => {
         {datos.map((anime) => (
           <li key={anime.id}>
             <Link
-              to={{
-                pathname: `/producto/${anime.id}`,
-                state: { anime },
-              }}
-            >
+              to={`/producto/true/${anime.id}`}>
               <PackAnime
                 sauce={anime.attributes.posterImage.tiny}
-                name={anime.attributes.titles.en}
+                name={anime.attributes.canonicalTitle}
               />
             </Link>
           </li>

@@ -1,0 +1,16 @@
+.search-result-pop{
+    position: absolute;
+    z-Index: 1;
+    width:60vw;
+    display: flex;
+    flex-flow: column;
+    background-color: #7CCFB4;
+}
+.search{
+    position: absolute;
+    z-Index: 1;
+    width:60vw;
+    display: flex;
+    flex-flow: column;
+    background-color: #7CCFB4;
+}

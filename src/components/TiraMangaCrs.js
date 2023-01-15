@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PackAnime from "./PackAnime.js";
+import { Link } from "react-router-dom"; // import Link component
 
 const TiraMangaCrs = () => {
   const [datos, setDatos] = useState([])
@@ -20,7 +21,16 @@ const TiraMangaCrs = () => {
       {console.log(datos)}
       <ul>
       {datos.map(anime=>(
-        <li key={anime.id}><PackAnime sauce={anime.attributes.posterImage.tiny} name={typeof anime.attributes.titles.en_us!="undefined"?anime.attributes.titles.en_us:anime.attributes.titles.en}/></li>
+        <li key={anime.id}>
+          <Link
+              to={`/producto/false/${anime.id}`}>
+              <PackAnime
+                sauce={anime.attributes.posterImage.tiny}
+                name={anime.attributes.canonicalTitle}
+              />
+         </Link>
+        </li>
+
       ))}
       </ul>
     </div>
