@@ -8,7 +8,8 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 5vw;
+    gap: 3vw;
+    overflow:scroll;
 }
 
 .Rmain-principal-section{
@@ -16,18 +17,19 @@
     gap: 15vh;
     background-color: #585F74;
     width: 35vw;
-    height: 50vh;
+    margin-top: 3vh;
 }
 
 .Rmain-principal-section-form{
     color: white;
     display: flex;
     width: 35vw;
-    height: 45vh;
-    flex-flow: column wrap;
+    height: fit-content;
+    flex-flow: column nowrap;
     align-content: center;
     text-align: center;
     gap: 3vh;
+    padding-bottom: 1vh;
 }
 
 

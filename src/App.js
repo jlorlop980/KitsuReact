@@ -8,6 +8,7 @@ import Login from "./components/Login.js";
 import Register from "./components/Register.js";
 import Producto from "./components/Producto.js";
 import SearchPage from "./components/SearchPage.js";
+import ErrorPage from "./components/ErrorPage.js";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/producto/:isAnime/:id" element={<Producto />} />
             <Route path="/search" element={<SearchPage />} />
+            <Route path="/informacionUser" element={<SearchPage />} />
+            <Route path="*" element={<ErrorPage />} />
         </Routes>
       <FooterKitsu />
       </Router>

@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.footer-mobile{
+    display: none;
+}
+
 .footer-principal{
     height: 10vh;
     background-color: #585F74;
@@ -32,4 +36,30 @@
     color: white;
     padding-right: 2vw;
     padding-top: 4vh;
+}
+
+@media (max-width: 850px){
+    /* Aqui cambio las vistas de escritorio por las de movil */
+
+    .footer-principal{
+        display: none;
+    }
+
+    .footer-mobile{
+        height: 10vh;
+        background-color: #585f74;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }    
+
+    .footer-mobile-nav-ul{
+        display: flex;
+        gap: 12vw;
+    }
+
+
+
+
 }

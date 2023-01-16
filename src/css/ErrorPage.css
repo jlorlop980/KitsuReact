@@ -1,0 +1,54 @@
+.Ermain-principal{
+    height: 80vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8vw;
+    background-image: url(./../images/fondopunpun404.png);
+    background-color: #bcd4de;
+    background-size: cover;
+}
+
+.Ermain-principal-section{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5vw;
+}
+
+.Ermain-principal-p{
+    font-size: 2vw;
+    text-align: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.Ermain-principal-section-div{
+    display: inline-block;
+    background: linear-gradient(136deg,#585f74,hwb(198deg 62% 21%));
+    height: 20vw;
+    width: 20vw;
+    font-size: 16vw;
+    animation: skew 3s infinite;
+    transform: skew(20deg);
+    animation-direction: alternate;
+    opacity: .7;
+    color: #7CCFB4;
+    text-align: center;
+}
+.character-image{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(20deg, 20deg)
+    }
+    100% {
+        transform: skew(-20deg, -20deg)
+    }
+}
+
+

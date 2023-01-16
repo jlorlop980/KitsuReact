@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.header-mobile{
+    display: none;
+}
+
 .header-principal{
     background-color: #585F74;
     display: flex;
@@ -53,4 +57,37 @@ ul{
 
 a{
     text-decoration: none;
+}
+
+@media (max-width: 850px){
+    /* Aqui cambio las vistas de escritorio por las de movil */
+    .header-principal{
+        display: none;
+    }
+
+    .header-mobile{
+        background-color:#585F74;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+    }
+
+    .header-mobile-logo{
+        min-width: 8vw;
+        min-height: 8vw;
+        max-width:10vh;
+        max-height:10vh;
+    }
+
+    .header-mobile-titulo{
+        font-weight: regular;
+        font-size: 2em;
+        color: white;
+        padding-left: 6vw;
+    }    
+
+
+
 }
