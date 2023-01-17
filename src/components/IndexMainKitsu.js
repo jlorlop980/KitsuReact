@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/IndexMainKitsu.css";
 
+//en este componente tenemos simplemente un titulo con un enlace al listado, nada que destacar
 function IndexMainKitsu(props) {
     return(
         <main className="main-principal">

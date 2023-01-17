@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "../css/Register.css";
 
+//Otra vez mas el mismo sistema de validación de formulario salvo que aqui cuando nos registramos nos guardamos en el localStorage las credenciales(no es la forma más segúra)
 function Register(){
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");

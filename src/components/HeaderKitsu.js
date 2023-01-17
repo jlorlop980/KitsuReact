@@ -4,6 +4,10 @@ import logo from "../images/logo.svg";
 import ajustes from "../images/Settings.svg";
 import "../css/HeaderKitsu.css";
 
+//aquí creo el header que como el footer tengo uno por cada versión, aunque en ese es interesante destacar que si estamos logueados
+//cambia el enlace de "usuario" que nos redirige al login, por nuestro usuario y nos lleva a la pagina de usuario
+//tambien aprovecho el enlace de ajuste que no utilizo le asigno la ruta de error para poder mostrarla facilmente
+
 function HeaderKitsu(props) {
  const [loged,setLoged] = useState(localStorage.getItem("iniciado"))
     return(

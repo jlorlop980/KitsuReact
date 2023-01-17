@@ -1,16 +1,21 @@
 import React, {useState} from "react";
 import "../css/Contacto.css";
 
-
+//En este componente controlo la pagina de contacto
 function Contacto(){
-    
+   //aqui declaro todos los estados  que uso para controlar los imputs 
     const [email, setEmail] = useState("");
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
     const [mensaje, setMensaje] = useState("");
+    //con este estado controlo los errores
     const [errors, setErrors] = useState({});
+    //por ultimo e me sirve para controlar el estado de focus en el campo textarea
     const [focused, setIsFocused] = useState(false);
 
+
+    //con esta función controlamos el evento de blur de el campo email, es decir al perder el focus
+    //en caso de estar incorrecto no añadiria al estado de errores un atributo email con el error para posteriormente mostrarlo
     const handleEmailBlur = () => {
         const newErrors = { ...errors };
 
@@ -25,6 +30,7 @@ function Contacto(){
         setErrors(newErrors);
      };
 
+        //exactamente lo mismo solo que para el nombre en este caso compuebo que al menos tenga 3 letras
       const handleNombreBlur = () => {
         const newErrors = { ...errors };
 
@@ -38,6 +44,9 @@ function Contacto(){
 
         setErrors(newErrors);
       };
+
+
+    //lo mismo de nuevo pero para los apellidos y pruebo al menos 5 letras
     const handleApellidoBlur = () => {
         const newErrors = { ...errors };
 
@@ -51,7 +60,7 @@ function Contacto(){
 
         setErrors(newErrors);
       };
-
+    //para controlar el blur del propio mensaje en el que controlamos que al menos contenga 10 caracteres con un máximo de 255
     const handleMensajeBlur = () => {
         const newErrors = { ...errors };
         setIsFocused(false)
@@ -66,9 +75,11 @@ function Contacto(){
         setErrors(newErrors);
       };
 
+        //aqui un cotrolador muy importante ya que aqui controlamos el propio submit del formulario
+        //en el cual por su acaso se vuelve a comprobar los parametros
+        
       const handleSubmit = (e) => {
         e.preventDefault();
-        // validate all the fields again to make sure that the user didn't leave any invalid input
         const newErrors = {};
 
         if (!email) {
@@ -104,6 +115,8 @@ function Contacto(){
           setErrors(newErrors);
         }
       };
+
+    //lo unico importante a comentar aqui es que utilizamos tanto onchange como onblur para controlar los formularios
     return( 
         <>
             <main className="Cmain-principal">

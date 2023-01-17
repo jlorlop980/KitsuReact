@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../css/Login.css";
 
+//componente para el login  de nuevo no creo que sea necesario repetir lo mismo que en contacto ya que es controlado de la misma manera comprobamos el campo con onBlur vamos guardando el valor con onChange.
+
 function Login(props) {
   
     const [errors, setErrors] = useState({});
@@ -30,7 +32,8 @@ function Login(props) {
     }
     alert("iniciado");
     localStorage.setItem("iniciado","true")    
-    // Redirect to the user information page
+    //podemos destacar que al loguearnos correctamente se cambia en el localStorage el campo iniciado que indica que estamos logueado y nos
+    //redirigue a informacionUser
     window.location.href = "/informacionUser";
   };
 

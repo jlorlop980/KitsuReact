@@ -2,6 +2,9 @@ import "../css/ErrorPage.css";
 import character from "./../images/punpun.png";
 import React, { useState, useEffect } from 'react';
 
+//en este componente mostramos la pagina 404, aprovecho esta página para usar el setTimeout en el que controlo que a los 5 segundos 
+//se muestre la imagen de un personaje, esto se encuentra tambien dentro del metodo useEffect que se llama al renderizar el componente
+//
 function ErrorPage() {
   const [showImage, setShowImage] = useState(false);
 

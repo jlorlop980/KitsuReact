@@ -7,6 +7,7 @@ import Amazon from "./../images/A.png";
 import Default from "./../images/tv.png";
 import "./../css/Producto.css";
 import Lack from "./../images/mobile/Home.svg";
+
 const Producto = () => {
     const [anime, setAnime] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -17,11 +18,13 @@ const Producto = () => {
     const regCrunchy=/crunchy/gi;
     const regAmazon=/ama/gi;
     const hasUrl=false;
-
+//aquí defino una funcion para mostrar el repodructor que queda en primer plano activande una capa por detras un div negro con poca opacidad la 
+    //url la pongo en un iframe y la saco de la llamada a la api con el id de video
     function handleClick(){
         setVideoM(!videoM);
     }
-
+//aqui compruebo una llamada anidada que hago a al api con los enlaces de visualizacion ya sea amazon, netflix crunchyroll etc pero como es un pcooc inconsistente ya que a veces no lo devuelve y otras como null he acabado dejando un icono de una casa
+    //aunque la idea original era que dependiendo del enlace te lalma a su pagina para visualizarlo 
     function plataforma(a){
        if(regCrunchy.test(a)){
            return Crunchyroll
@@ -36,7 +39,7 @@ const Producto = () => {
             return Default
         }
     }
-
+//aquí hago las llamadas a la api ambas y guardo los datos los cuales los recojo de la url con el use useParams arriba definido con id y si es o no anime
     useEffect(() => {
       const obtenerAnime = async () => {
         const data = await fetch(`https://kitsu.io/api/edge/${isAnime=="true"?"anime":"manga"}/${id}`);

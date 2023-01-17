@@ -3,6 +3,9 @@ import PackAnime from "./PackAnime";
 import {Link} from "react-router-dom";
 import "./../css/Searchpage.css";
 import Fondo from "./../images/fondoSP.jpeg";
+//en esta pagina podemos hacer una busqueda por filtros como son la categoría o o parametros de ordenación como son la popularidad o la fecha de salida
+//así mismo podemos controlar esta ordenación de forma ascendente o descendete además de comprobar si son animes o mangas  y el numero de elementos por página
+//con un máximo de 20 por página
 
 const SearchPage = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -14,7 +17,7 @@ const SearchPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const categoriesOptions = ["adventure", "Samurai", "Boxing", "musical-band", "magic", "alien", "zombie","robot","martial-arts","idol","space","fantasy-world","time-travel","mecha","demon","love","comedy","isekai","seinen","shounen","josei","psychological","drama","dystopia","sports","horror","lice-of-life"];
   const sortMethodsOptions = ["averageRating", "popularityRank", "ageRating", "startDate"];
-
+//aqui comprobamoslos filtros (usamos el "-" para poder cambiar entre descendente o ascendente)
   const handleSearch = async () => {
     setIsLoading(true);
     const sort = sortDirection ? `-${sortMethod}` : sortMethod;
@@ -25,8 +28,9 @@ const SearchPage = () => {
     setSearchResults(searchResults.data);
     setIsLoading(false);
   };
-
-  return (
+//también tenemos un imagen al fondo de la página ya que los estilos es lo que menos me he centrado, además cada elemento es tambien un link a la página de producto
+//como anteriormente usamos un map para poder mostrar todos los elementos
+    return (
     <div className="SPmain">
       <div className="busquedas">
       <button className="botoncito" onClick={() => setIsAnime(!isAnime)}>

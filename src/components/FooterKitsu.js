@@ -9,6 +9,9 @@ import User from "./../images/mobile/User.svg";
 import Contacto  from "./../images/mobile/Contacto.svg";
 import "../css/FooterKitsu.css";
 
+//Este componente es en el que creo el footer y al principio traté de usar el mismo diseño que en el modulo de diseño por eso tengo 2 footer-principal-redes-img
+//uno correspondiente a el escritorio y otro al de móvil que se oculta o se muestran dependiendo de el tamaño de la pantalla
+
 function FooterKitsu(props){
 
     return(

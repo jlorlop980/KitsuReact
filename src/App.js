@@ -11,9 +11,13 @@ import SearchPage from "./components/SearchPage.js";
 import ErrorPage from "./components/ErrorPage.js";
 import InformacionUser from "./components/InformacionUser.js";
 
-
+//Este es el componente principal de la aplicación en el que controlo las rutas
+//Tambien debo importar react y algun elemento del react-router-dom asi como todos los componentes que cargamos en el router
 function App() {
-  return (
+  //en este caso creo un router en el que indico para cada ruta que elemento tiene que cargar
+    //y en caso de una ruta no encontrada cargaria la página de error
+    //incluso al dejorlo fuera de router no permite tener tanto el footer como el header en todas las rutas
+    return (
       <Router>
       <HeaderKitsu />
         <Routes>

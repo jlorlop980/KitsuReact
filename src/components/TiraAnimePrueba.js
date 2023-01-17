@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"; // import Link component
 import PackAnime from "./PackAnime.js";
 
+//El comportamiento de este componente es exactamente idéntico al de manga solo que en este caso pasariamos en el link true ya que si es anime
+//(posteriormente veremos el para que se usa parametro true o false) y que la llamada a la api es en el endpoint de anime por el resto es lo mismo
+
 const TiraAnimePrueba = () => {
   const [datos, setDatos] = useState([]);
 

@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 
 function InformacionUser() {
-
+ //no creo que haga falta comentar mucho aquí ya que es practicamente lo mismo que en el login, registro y contacto, con la diferencia aqui el valor por defecto es el que le tengamos en el localStorage en caso de tener alguno
     const [errors, setErrors] = useState({});
     const [nombre, setNombre] = useState(localStorage.getItem("nombre"));
     const [apellido, setApellido] = useState(localStorage.getItem("apellido"));
@@ -9,7 +9,7 @@ function InformacionUser() {
     const [bDate, setBDate] = useState(localStorage.getItem("bDate)"));
     const [preference, setPreference] = useState(localStorage.getItem("preference"));
 
-
+    //controlamos el submit de igual manera
     const handleSubmit = (event) => {
         event.preventDefault();
         
@@ -35,7 +35,7 @@ function InformacionUser() {
         console.log(bDate)
         
 
-        
+       //mostramos un alert confirmando que hemos realizado con exito el cambio  
         alert("guardado con exito");
         localStorage.setItem("nombre",nombre)    
         localStorage.setItem("apellido",apellido)    
