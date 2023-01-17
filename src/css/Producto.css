@@ -1,0 +1,114 @@
+.Pmain{
+    display:flex;
+    flex-flow:row nowrap;
+    height: 80vh;
+    background-color:#BCD4DE;
+    gap:3vw
+}
+
+.datos{
+    width: 60vw;
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-color: white;
+    gap: 2vw;
+    margin-top: 4vw;
+    align-items:center;
+    border-radius:50px;
+    background-color:#585F74;
+}
+
+.nombre{
+    color:#7CCFB4;
+    font-size:3rem;
+}
+
+
+.cartel{
+    width:30vw;
+    height: 80vh;
+
+}
+
+.subdatos{
+    display:flex;
+    flex-flow: row nowrap;
+    gap:2vw;
+    padding-bottom:2vw;
+    padding-right: 2vw;
+}
+
+.subdatos-titulo{
+    display:flex;
+    flex-flow:column nowrap;
+    gap: 2vw;
+    font-size:2rem;
+    padding-left: 3vw;
+
+}
+
+.subdatos-contenido{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2vw;
+    color:white
+}
+
+.elemento{
+    font-size:2rem;
+}
+
+
+
+
+
+
+
+
+
+.abierto{
+    position:absolute;
+    right:20vh;
+    top:20vh;
+    z-index:1;
+}
+
+
+.cerrado{
+    display:none;
+}
+
+.yt{
+    position: absolute;
+    z-index: 2;
+    right: 2vw;
+    top: 15vh;
+    cursor: pointer;
+}
+
+.enlace{
+    position: absolute;
+    z-index: 2;
+    right: 2vw;
+    top: 25vh;
+    cursor: pointer
+
+}
+
+.blackNoir{
+    width:100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 40%;
+    top:0;
+}
+
+.open{
+position:absolute
+}
+
+.closed{
+    display:none
+}

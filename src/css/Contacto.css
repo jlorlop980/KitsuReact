@@ -39,7 +39,7 @@
 
 .Cmain-principal-section-textarea{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     gap: 4vh;
     height: 40vh;
 }
@@ -83,4 +83,11 @@
    font-size: 1.5rem;
    border-radius: 11vh;
 }
+.focusOn{
+    border-width:5px;
+   border-color:#7CCFB4;
+   box-shadow: 0 0 3px #7CCFB4;
 
+}
+
+.focusOff{}

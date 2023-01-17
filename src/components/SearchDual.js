@@ -8,6 +8,7 @@ const SearchDual = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
   const [isAnime, setIsAnime] = useState(true);
+  const [hover, setHover] = useState(false);
 
   useEffect(() => {
     if (searchText === "") {
@@ -40,8 +41,11 @@ const SearchDual = () => {
         </button>
       </div>
       
-        <div className="search" >
-          <ul className="search">
+        <div className="search" 
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}      
+        >
+          <ul className={`search ${hover?"mON":"mOFF"}`}>
             {searchResults.map((result) => (
               <li key={result.id}>
                 <Link to={{

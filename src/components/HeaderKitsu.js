@@ -14,10 +14,11 @@ function HeaderKitsu(props) {
         <nav className="header-principal-nav">
             <ul>
                 <li><a className="header-principal-nav-a" href={loged=="true"?"/informacionUser":"/login"}>{loged=="true"?localStorage.getItem("username"):"Usuario"}<img src={usuario} alt="usuario" className="header-principal-nav-img" /></a></li>
-                <li><a className="header-principal-nav-a" href="/informacionUser">ajustes<img src={ajustes} alt="ajustes" className="header-principal-nav-img" /></a></li>
+                <li><a className="header-principal-nav-a" href="/asd">ajustes<img src={ajustes} alt="ajustes" className="header-principal-nav-img" /></a></li>
             </ul>
         </nav>
     </header>
+
     <header class="header-mobile">
         <img src={logo} class="header-mobile-logo"/>
         <a href="./index.html" class="header-mobile-titulo">KITSU API</a>

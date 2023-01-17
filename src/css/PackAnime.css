@@ -1,0 +1,9 @@
+.packed{
+    display:flex;
+    flex-flow:column nowrap;
+}
+
+.slug{
+    width:156px;
+
+}
