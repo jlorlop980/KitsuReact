@@ -10,9 +10,9 @@ y posteriormente:
 npm start 
 ```
 
-####Se utiliza la api de https://kitsu.io/explore/anime
+##Se utiliza la api de https://kitsu.io/explore/anime
 
-#####La página desplegada es la siguiente:
+###La página desplegada es la siguiente:
 https://luminous-cendol-85346a.netlify.app/
 
 
