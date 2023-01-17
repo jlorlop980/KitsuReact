@@ -30,15 +30,20 @@ const SearchDual = () => {
   return (
       <div>
       <div>
-        <input
+        <input className="botoncito"
           type="text"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           placeholder="Search for anime/manga..."
         />
-        <button onClick={() => setIsAnime(!isAnime)}>
+        <button className="botoncito" onClick={() => setIsAnime(!isAnime)}>
           {isAnime ? "Search manga" : "Search anime"}
         </button>
+      <Link to={"/search"}>
+        <button className="botoncito">
+            Página de busqueda
+        </button>
+      </Link>
       </div>
       
         <div className="search" 

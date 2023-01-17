@@ -1,0 +1,32 @@
+.busquedas{
+ display:flex;
+ justify-content:flex-start;
+ flex-flow:row nowrap;
+ gap:5vw;
+
+}
+
+.SPmain{
+    display:flex;
+    flex-flow:column wrap;
+    overflow:scroll;
+    background-color:#BCD4DE;
+    background-image: url(./../images/bgOpacity.png);
+    height: 80vh;
+    gap:2vw;
+}
+
+.botoncito{
+    color:#7CCFB4;
+    background-color:#585F74;
+    border-radius:20px;
+    width:10vw;
+    text-align:center;
+}
+
+.fondo{
+    width: 100vw;
+    height: 30vh;
+    position:absolute;
+    bottom:10vh;
+}

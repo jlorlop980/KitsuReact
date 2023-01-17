@@ -8,7 +8,8 @@
     background: url("./../images/bgOpacity.png");
     background-color: #BCD4DE;
     padding-top: 2vw;
-
+    padding-left:2vw;
+    overflow:scroll;
 }
 
 .lisElementos{

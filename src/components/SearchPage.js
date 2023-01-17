@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import PackAnime from "./PackAnime";
+import {Link} from "react-router-dom";
+import "./../css/Searchpage.css";
+import Fondo from "./../images/fondoSP.jpeg";
 
 const SearchPage = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -9,7 +12,7 @@ const SearchPage = () => {
   const [sortDirection, setSortDirection] = useState(false);
   const [pageLimit, setPageLimit] = useState(15);
   const [isLoading, setIsLoading] = useState(false);
-  const categoriesOptions = ["adventure", "Samurai", "Boxing", "musical-band", "magic", "alien", "zombies"];
+  const categoriesOptions = ["adventure", "Samurai", "Boxing", "musical-band", "magic", "alien", "zombie","robot","martial-arts","idol","space","fantasy-world","time-travel","mecha","demon","love","comedy","isekai","seinen","shounen","josei","psychological","drama","dystopia","sports","horror","lice-of-life"];
   const sortMethodsOptions = ["averageRating", "popularityRank", "ageRating", "startDate"];
 
   const handleSearch = async () => {
@@ -24,15 +27,15 @@ const SearchPage = () => {
   };
 
   return (
-    <div>
-      <div>
-      <button onClick={() => setIsAnime(!isAnime)}>
+    <div className="SPmain">
+      <div className="busquedas">
+      <button className="botoncito" onClick={() => setIsAnime(!isAnime)}>
         {isAnime ? "Show manga" : "Show anime"}
         </button>
 
         <label>
           Select category:
-          <select onChange={(e) => setCategories(e.target.value)}>
+          <select className="botoncito" onChange={(e) => setCategories(e.target.value)}>
             <option value="">All</option>
             {categoriesOptions.map((category) => (
               <option key={category} value={category}>
@@ -43,7 +46,7 @@ const SearchPage = () => {
         </label>
         <label>
           Select sort method:
-          <select onChange={(e) => setSortMethod(e.target.value)}>
+          <select className="botoncito" onChange={(e) => setSortMethod(e.target.value)}>
             {sortMethodsOptions.map((sortMethod) => (
               <option key={sortMethod} value={sortMethod}>
                 {sortMethod}
@@ -51,24 +54,19 @@ const SearchPage = () => {
             ))}
           </select>
         </label>
-        <button onClick={() => setSortDirection(!sortDirection)}>
+        <button className="botoncito" onClick={() => setSortDirection(!sortDirection)}>
           {sortDirection ? "Ascending" : "Descending"}
         </button>
-      </div>
-      <div>
         <label>
           Number of items per page:
-          <input
+          <input className="botoncito" max="20"
             type="number"
             value={pageLimit}
             onChange={(e) => setPageLimit(e.target.value)}
           />
         </label>
-        <button onClick={() => setIsAnime(!isAnime)}>
-          {isAnime ? "Search manga" : "Search anime"}
-        </button>
       </div>
-      <button onClick={handleSearch}>Search</button>
+      <button className="botoncito" onClick={handleSearch}>Search</button>
       {isLoading ? (
         <div>Loading...</div>
       ) : (
@@ -76,15 +74,18 @@ const SearchPage = () => {
           <ul>
             {searchResults.map((result) => (
               <li key={result.id}>
+                <Link to={`/producto/${isAnime}/${result.id}`}>
                 <PackAnime
                   sauce={result.attributes.posterImage.tiny}
                   name={result.attributes.canonicalTitle}
                 />
+                </Link>
               </li>
             ))}
           </ul>
         </div>
       )}
+      <img className="fondo" src={Fondo} />
     </div>
   );
 };

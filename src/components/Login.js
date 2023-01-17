@@ -31,7 +31,7 @@ function Login(props) {
     alert("iniciado");
     localStorage.setItem("iniciado","true")    
     // Redirect to the user information page
-    window.location.href = "/informacionUser.html";
+    window.location.href = "/informacionUser";
   };
 
   return (

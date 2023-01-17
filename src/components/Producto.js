@@ -6,7 +6,7 @@ import Netflix from "./../images/netflix.png";
 import Amazon from "./../images/A.png";
 import Default from "./../images/tv.png";
 import "./../css/Producto.css";
-
+import Lack from "./../images/mobile/Home.svg";
 const Producto = () => {
     const [anime, setAnime] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +16,7 @@ const Producto = () => {
     const regNetflix=/netflix/gi;
     const regCrunchy=/crunchy/gi;
     const regAmazon=/ama/gi;
-
+    const hasUrl=false;
 
     function handleClick(){
         setVideoM(!videoM);
@@ -42,13 +42,15 @@ const Producto = () => {
         const data = await fetch(`https://kitsu.io/api/edge/${isAnime=="true"?"anime":"manga"}/${id}`);
         const animeDetail = await data.json();
           console.log(animeDetail.data)
-          if(isAnime=="true"){
+          if(isAnime=="true"){try{
           const enlaces= await fetch(animeDetail.data.relationships.streamingLinks.links.related);
           const enlaceDetail =await enlaces.json()
-            
+            hasUrl=!hasUrl;
             setEnlace(enlaceDetail.data[0])
           }
 
+            catch{console.log("no tiene url")}
+          }
           {/*enale.data.relationship.streamingLinks.self*/}
         setAnime(animeDetail.data);
         setIsLoading(false)
@@ -92,10 +94,10 @@ const Producto = () => {
             <img width="48" height="48" style={{zIndex:"1"}} src={Youtube}/>
       </a>
         
-      <iframe className={videoM?"abierto":"cerrado"} width="560" height="315" src="https://www.youtube.com/embed/ofXigq9aIpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe className={videoM?"abierto":"cerrado"} width="560" height="315" src={`https://www.youtube.com/embed/${anime.attributes.youtubeVideoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <div className={`blackNoir  ${videoM?"open":"closed"}`}></div>
-    <a href={enlace.attributes.url} className="enlace" >
-        <img width="48" height="48" src={plataforma(enlace.attributes.url)}/>
+    <a href={hasUrl?enlace.attributes.url:"#"} className="enlace" >
+        <img width="48" height="48" src={hasUrl?plataforma(enlace.attributes.url):Lack}/>
     </a></>:<p></p>}
     </main>
   );
