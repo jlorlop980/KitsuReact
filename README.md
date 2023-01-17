@@ -9,7 +9,11 @@ y posteriormente:
 ``` javascript
 npm start 
 ```
+## Para usar jsdoc seria recomendable introducir el siguiente comando:
 
+``` javascript
+npm install jsdoc 
+```
 #### Se utiliza la api de https://kitsu.io/explore/anime
 
 #### La página desplegada es la siguiente:
