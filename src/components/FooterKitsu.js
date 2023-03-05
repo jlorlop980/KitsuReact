@@ -26,13 +26,13 @@ function FooterKitsu(props){
             <a href="/contacto" className="footer-principal-contacto">Contacto</a>
         </footer>
 
-        <footer class="footer-mobile">
-            <nav class="footer-mobile-nav">
-                <ul class="footer-mobile-nav-ul">
-                    <li><a class="footer-mobile-nav-a" href="/"><img src={Home}/></a></li>
-                    <li><a class="footer-mobile-nav-a" href="/login"><img src={User}/></a></li>
-                    <li><a class="footer-mobile-nav-a" href="/listado"><img src={List}/></a></li>
-                    <li><a class="footer-mobile-nav-a" href="/contacto"><img src={Contacto}/></a></li>
+        <footer className="footer-mobile">
+            <nav className="footer-mobile-nav">
+                <ul className="footer-mobile-nav-ul">
+                    <li><a className="footer-mobile-nav-a" href="/"><img src={Home}/></a></li>
+                    <li><a className="footer-mobile-nav-a" href="/login"><img src={User}/></a></li>
+                    <li><a className="footer-mobile-nav-a" href="/listado"><img src={List}/></a></li>
+                    <li><a className="footer-mobile-nav-a" href="/contacto"><img src={Contacto}/></a></li>
                 </ul>
             </nav>
         </footer>

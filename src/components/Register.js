@@ -43,8 +43,8 @@ function Register(){
 
     if (!password) {
       newErrors.password = "Password is required";
-    } else if (password.length < 8) {
-      newErrors.password = "Password must be at least 8 characters";
+    } else if (!/^(?=.*[A-Z])(?=.*\d)(?=.*\W)[A-Za-z\d\W]{8,}$/.test(password)) {
+      newErrors.password = "Password must have 8 characters, 1 cap, 1 number and 1 symbol";
     } else {
       delete newErrors.password;
     }
@@ -83,7 +83,7 @@ function Register(){
 
     if (!password) {
       newErrors.password = "Password is required";
-    } else if (password.length < 8) {
+    } else if (!/^(?=.*[A-Z])(?=.*\d)(?=.*\W)[A-Za-z\d\W]{8,}$/.test(password)) {
       newErrors.password = "Password must be at least 8 characters";
     }
 

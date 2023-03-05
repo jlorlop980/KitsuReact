@@ -9,6 +9,10 @@ function InformacionUser() {
     const [bDate, setBDate] = useState(localStorage.getItem("bDate)"));
     const [preference, setPreference] = useState(localStorage.getItem("preference"));
 
+    const handleLogout = () => {
+        localStorage.setItem("iniciado", "false");
+
+      };
     //controlamos el submit de igual manera
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -98,6 +102,7 @@ function InformacionUser() {
                 </label>
                 <button >Actualizar</button>
             </form>
+            <a href="./login" onClick={handleLogout}>Logout</a>
         </section>
     </main>
     );

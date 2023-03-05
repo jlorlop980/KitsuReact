@@ -23,9 +23,9 @@ function HeaderKitsu(props) {
         </nav>
     </header>
 
-    <header class="header-mobile">
-        <img src={logo} class="header-mobile-logo"/>
-        <a href="./index.html" class="header-mobile-titulo">KITSU API</a>
+    <header className="header-mobile">
+        <img src={logo} className="header-mobile-logo"/>
+        <a href="./index.html" className="header-mobile-titulo">KITSU API</a>
     </header>
 
      </>   

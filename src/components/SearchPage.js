@@ -10,7 +10,7 @@ import Fondo from "./../images/fondoSP.jpeg";
 const SearchPage = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [isAnime, setIsAnime] = useState(true);
-  const [categories, setCategories] = useState("");
+  const [categories, setCategories] = useState("adventure");
   const [sortMethod, setSortMethod] = useState("averageRating");
   const [sortDirection, setSortDirection] = useState(false);
   const [pageLimit, setPageLimit] = useState(15);
@@ -40,7 +40,6 @@ const SearchPage = () => {
         <label>
           Select category:
           <select className="botoncito" onChange={(e) => setCategories(e.target.value)}>
-            <option value="">All</option>
             {categoriesOptions.map((category) => (
               <option key={category} value={category}>
                 {category}
