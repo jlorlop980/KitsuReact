@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import "../css/Login.css";
 
 //componente para el login  de nuevo no creo que sea necesario repetir lo mismo que en contacto ya que es controlado de la misma manera comprobamos el campo con onBlur vamos guardando el valor con onChange.
-
+/**
+ * @description Este componente se encarga de mostrar el login y todas su funcionalidad
+ * @function
+ * @name Login
+ * @returns {JSX} JSX con el login.
+ */
 function Login(props) {
   
     const [errors, setErrors] = useState({});

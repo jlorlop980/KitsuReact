@@ -1,4 +1,32 @@
-import React, {useState} from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Contacto.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Contacto.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, {useState} from "react";
 import "../css/Contacto.css";
 
 //En este componente controlo la pagina de contacto
@@ -42,7 +70,7 @@ function Contacto(){
 
         if (!nombre) {
           newErrors.nombre = "El nombre es obligatorio";
-        } else if (nombre.length < 3) {
+        } else if (nombre.length &lt; 3) {
           newErrors.nombre = "El nombre debe tener al menos 3 letras";
         } else {
           delete newErrors.nombre;
@@ -58,7 +86,7 @@ function Contacto(){
 
         if (!apellido) {
           newErrors.apellido = "Los apellidos son obligatorios";
-        } else if (apellido.length < 5) {
+        } else if (apellido.length &lt; 5) {
           newErrors.apellido = "Los apellidos deben tener al menos 5 letras";
         } else {
           delete newErrors.apellido;
@@ -72,7 +100,7 @@ function Contacto(){
         setIsFocused(false)
         if (!mensaje) {
           newErrors.mensaje = "El mensaje es obligatorio";
-        } else if (mensaje.length < 5||mensaje.length>255) {
+        } else if (mensaje.length &lt; 5||mensaje.length>255) {
           newErrors.mensaje = "El mensaje deben tener entre 10 y 255 letras";
         } else {
           delete newErrors.mensaje;
@@ -96,19 +124,19 @@ function Contacto(){
 
         if (!nombre) {
           newErrors.nombre = "El nombre es obligatorio";
-        } else if (nombre.length < 3) {
+        } else if (nombre.length &lt; 3) {
           newErrors.nombre = "El usuario debe tener al menos 3 letras";
         }
 
         if (!apellido) {
           newErrors.apellido = "Los apellidos son obligatorios";
-        } else if (apellido.length < 5) {
+        } else if (apellido.length &lt; 5) {
           newErrors.apellido = "Los apelidos tienen que tener minimo 8 letras";
         }
 
         if (!mensaje) {
           newErrors.mensaje = "Mensaje necesario";
-        } else if (mensaje.length < 5||mensaje.length>255) {
+        } else if (mensaje.length &lt; 5||mensaje.length>255) {
           newErrors.password2 = "El mensaje tiene que contener entre 5 y 255 caracteres";
         }
 
@@ -124,21 +152,21 @@ function Contacto(){
 
     //lo unico importante a comentar aqui es que utilizamos tanto onchange como onblur para controlar los formularios
     return( 
-        <>
-            <main className="Cmain-principal">
-                <section className="Cmain-principal-section">
-                    <form id="contacto" action="./assets/js/index.js" className="Cmain-principal-section-form">  
-                        <label htmlFor="nomb" className="Cmain-principal-section-form-label">Nombre</label>
-                        <input
+        &lt;>
+            &lt;main className="Cmain-principal">
+                &lt;section className="Cmain-principal-section">
+                    &lt;form id="contacto" action="./assets/js/index.js" className="Cmain-principal-section-form">  
+                        &lt;label htmlFor="nomb" className="Cmain-principal-section-form-label">Nombre&lt;/label>
+                        &lt;input
                             value={nombre}
                             onChange={(e) => setNombre(e.target.value)}
                             onBlur={handleNombreBlur}
                             type="text" 
                             id="nomb" 
                             className="Cmain-principal-section-form-input"/>
-                            <div style={{color:"red"}}>{errors.nombre}</div>
-                        <label htmlFor="appe" className="Cmain-principal-section-form-label">Apellido</label>
-                        <input
+                            &lt;div style={{color:"red"}}>{errors.nombre}&lt;/div>
+                        &lt;label htmlFor="appe" className="Cmain-principal-section-form-label">Apellido&lt;/label>
+                        &lt;input
                             value={apellido}
                             onChange={(e) => setApellido(e.target.value)}
                             onBlur={handleApellidoBlur}
@@ -146,9 +174,9 @@ function Contacto(){
                             id="appe" 
                             className="Cmain-principal-section-form-input" 
                         />
-                        <div style={{color:"red"}}>{errors.apellido}</div>
-                        <label htmlFor="mail" className="Cmain-principal-section-form-label">Email</label>
-                        <input
+                        &lt;div style={{color:"red"}}>{errors.apellido}&lt;/div>
+                        &lt;label htmlFor="mail" className="Cmain-principal-section-form-label">Email&lt;/label>
+                        &lt;input
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             onBlur={handleEmailBlur}
@@ -156,11 +184,11 @@ function Contacto(){
                             id="mail" 
                             className="Cmain-principal-section-form-input" 
                         />
-                        <div style={{color:"red"}}>{errors.email}</div>
-                    </form>
-                    <div className="Cmain-principal-section-textarea">
-                        <label htmlFor="mensa" className="Cmain-principal-section-textarea-label">Mensaje</label>
-                        <textarea
+                        &lt;div style={{color:"red"}}>{errors.email}&lt;/div>
+                    &lt;/form>
+                    &lt;div className="Cmain-principal-section-textarea">
+                        &lt;label htmlFor="mensa" className="Cmain-principal-section-textarea-label">Mensaje&lt;/label>
+                        &lt;textarea
                             value={mensaje}
                             onChange={(e) => setMensaje(e.target.value)}
                             onFocus={() => setIsFocused(true)}
@@ -168,16 +196,39 @@ function Contacto(){
                             form="contacto" 
                             id="mensa" 
                             className={`Cmain-principal-section-form-input Cmain-pricipal-section-form-mensaje ${focused?"focusOn":"focusOff"}`}>
-                        </textarea>
-                        <div style={{color:"red"}}>{errors.mensaje}</div>
-                    </div>        
-                </section>
-                <a href="/listado" onClick={handleSubmit} className="Cmain-principal-section-a">Enviar</a>
+                        &lt;/textarea>
+                        &lt;div style={{color:"red"}}>{errors.mensaje}&lt;/div>
+                    &lt;/div>        
+                &lt;/section>
+                &lt;a href="/listado" onClick={handleSubmit} className="Cmain-principal-section-a">Enviar&lt;/a>
 
-            </main>
-        </> 
+            &lt;/main>
+        &lt;/> 
     ); 
 
 }
 
 export default Contacto
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Contacto">Contacto</a></li><li><a href="global.html#ErrorPage">ErrorPage</a></li><li><a href="global.html#FooterKitsu">FooterKitsu</a></li><li><a href="global.html#HeaderKitsu">HeaderKitsu</a></li><li><a href="global.html#IndexMainKitsu">IndexMainKitsu</a></li><li><a href="global.html#InformacionUser">InformacionUser</a></li><li><a href="global.html#Listado">Listado</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#PackAnime">PackAnime</a></li><li><a href="global.html#Producto">Producto</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#SearchDual">SearchDual</a></li><li><a href="global.html#SearchPage">SearchPage</a></li><li><a href="global.html#TiraAnimePrueba">TiraAnimePrueba</a></li><li><a href="global.html#TiraMangaCrs">TiraMangaCrs</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Mar 07 2023 15:47:07 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

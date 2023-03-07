@@ -3,10 +3,16 @@ import PackAnime from "./PackAnime";
 import {Link} from "react-router-dom";
 import "./../css/Searchpage.css";
 import Fondo from "./../images/fondoSP.jpeg";
+
 //en esta pagina podemos hacer una busqueda por filtros como son la categoría o o parametros de ordenación como son la popularidad o la fecha de salida
 //así mismo podemos controlar esta ordenación de forma ascendente o descendete además de comprobar si son animes o mangas  y el numero de elementos por página
 //con un máximo de 20 por página
-
+/**
+ * @description Este componente se encarga de mostrar la pagina de busqueda
+ * @function
+ * @name SearchPage
+ * @returns {JSX} JSX con la pagina de busqueda con distintos filtros para buscar por ejemplo por categoria.
+ */
 const SearchPage = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [isAnime, setIsAnime] = useState(true);
@@ -65,7 +71,10 @@ const SearchPage = () => {
           <input className="botoncito" max="20"
             type="number"
             value={pageLimit}
-            onChange={(e) => setPageLimit(e.target.value)}
+            onChange={(e) => {
+              const value = Math.min(Math.max(parseInt(e.target.value) || 1, 1), 20);
+              setPageLimit(value);
+            }}
           />
         </label>
       </div>
@@ -74,7 +83,7 @@ const SearchPage = () => {
         <div>Loading...</div>
       ) : (
         <div>
-          <ul>
+          <ul className="todos">
             {searchResults.map((result) => (
               <li key={result.id}>
                 <Link to={`/producto/${isAnime}/${result.id}`}>

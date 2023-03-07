@@ -1,4 +1,32 @@
-import React, {useState} from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Register.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Register.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, {useState} from "react";
 import "../css/Register.css";
 
 //Otra vez mas el mismo sistema de validación de formulario salvo que aqui cuando nos registramos nos guardamos en el localStorage las credenciales(no es la forma más segúra)
@@ -34,7 +62,7 @@ function Register(){
 
     if (!username) {
       newErrors.username = "Username is required";
-    } else if (username.length < 8) {
+    } else if (username.length &lt; 8) {
       newErrors.username = "Username must be at least 8 characters";}
 
       else {
@@ -112,11 +140,11 @@ function Register(){
   };
 
     return(
-        <main className="Rmain-principal">
-            <section className="Rmain-principal-section">
-                <form action="./assets/js/index.js" className="Rmain-principal-section-form">  
-                    <label htmlFor="email" className="Rmain-principal-section-form-label">Email</label>
-                    <input
+        &lt;main className="Rmain-principal">
+            &lt;section className="Rmain-principal-section">
+                &lt;form action="./assets/js/index.js" className="Rmain-principal-section-form">  
+                    &lt;label htmlFor="email" className="Rmain-principal-section-form-label">Email&lt;/label>
+                    &lt;input
                         type="text"
                         id="email"
                         className="Rmain-principal-section-form-input"
@@ -125,12 +153,12 @@ function Register(){
                         onBlur={handleEmailBlur}
                         />
                         
-                        <div className="Rmain-principal-section-form-error" style={{color:"#eb584d"}}>
+                        &lt;div className="Rmain-principal-section-form-error" style={{color:"#eb584d"}}>
                           {errors.email}
-                        </div>
+                        &lt;/div>
                       
-                     <label htmlFor="user" className="Rmain-principal-section-form-label">Usuario</label>
-                    <input 
+                     &lt;label htmlFor="user" className="Rmain-principal-section-form-label">Usuario&lt;/label>
+                    &lt;input 
                         type="text"
                         id="user"
                         className="Rmain-principal-section-form-input"
@@ -138,11 +166,11 @@ function Register(){
                         onChange={(e) => setUsername(e.target.value)}
                         onBlur={handleUsernameBlur}
                     />
-                    <div className="Rmain-principal-section-form-error" style={{color:"#eb584d"}}>
+                    &lt;div className="Rmain-principal-section-form-error" style={{color:"#eb584d"}}>
                         {errors.username}
-                    </div>
-                    <label htmlFor="pass" className="Rmain-principal-section-form-label">Contraseña</label>
-                    <input 
+                    &lt;/div>
+                    &lt;label htmlFor="pass" className="Rmain-principal-section-form-label">Contraseña&lt;/label>
+                    &lt;input 
                         type="password"
                         id="pass"
                         className="Rmain-principal-section-form-input"
@@ -150,11 +178,11 @@ function Register(){
                         onChange={(e) => setPassword(e.target.value)}
                         onBlur={handlePasswordBlur}
                     />
-                    <div className="Rmain-principal-section-form-error" style={{color:"#eb584d"}}>
+                    &lt;div className="Rmain-principal-section-form-error" style={{color:"#eb584d"}}>
                         {errors.password}
-                    </div>
-                    <label htmlFor="rpass" className="Rmain-principal-section-form-label">Repetir contraseña</label>
-                    <input 
+                    &lt;/div>
+                    &lt;label htmlFor="rpass" className="Rmain-principal-section-form-label">Repetir contraseña&lt;/label>
+                    &lt;input 
                         type="password"
                         id="rpass"
                         className="Rmain-principal-section-form-input"
@@ -162,17 +190,40 @@ function Register(){
                         onChange={(e) => setPassword2(e.target.value)}
                         onBlur={handlePassword2Blur}
                      />
-                    <div className="Rmain-principal-section-form-error" style={{color:"#eb584d"}}>
+                    &lt;div className="Rmain-principal-section-form-error" style={{color:"#eb584d"}}>
                         {errors.password2}
-                    </div>
-                </form>
-            </section>
+                    &lt;/div>
+                &lt;/form>
+            &lt;/section>
         
-            <a href="./login" className="Rmain-principal-section-a" onClick={handleSubmit}>Enviar</a>
-            <a href="./login" >ya tengo una cuenta</a>
-        </main>
+            &lt;a href="./login" className="Rmain-principal-section-a" onClick={handleSubmit}>Enviar&lt;/a>
+            &lt;a href="./login" >ya tengo una cuenta&lt;/a>
+        &lt;/main>
     );
 
 }
 
 export default Register;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Contacto">Contacto</a></li><li><a href="global.html#ErrorPage">ErrorPage</a></li><li><a href="global.html#FooterKitsu">FooterKitsu</a></li><li><a href="global.html#HeaderKitsu">HeaderKitsu</a></li><li><a href="global.html#IndexMainKitsu">IndexMainKitsu</a></li><li><a href="global.html#InformacionUser">InformacionUser</a></li><li><a href="global.html#Listado">Listado</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#PackAnime">PackAnime</a></li><li><a href="global.html#Producto">Producto</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#SearchDual">SearchDual</a></li><li><a href="global.html#SearchPage">SearchPage</a></li><li><a href="global.html#TiraAnimePrueba">TiraAnimePrueba</a></li><li><a href="global.html#TiraMangaCrs">TiraMangaCrs</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Mar 07 2023 15:47:07 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

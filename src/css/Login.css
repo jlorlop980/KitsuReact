@@ -49,3 +49,24 @@
    border-radius: 11vh;
 }
 
+.logout{
+    background-color: rgb(248, 96, 96);
+    position: absolute;
+    top:15vh;
+    left:1rem;
+    border-radius: 50vh;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+}
+
+.update{
+    background-color: rgb(107, 212, 175);
+    position: absolute;
+    top:15vh;
+    right:1rem;
+    border-radius: 50vh;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+}

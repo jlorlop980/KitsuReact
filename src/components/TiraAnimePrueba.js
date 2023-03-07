@@ -4,7 +4,12 @@ import PackAnime from "./PackAnime.js";
 
 //El comportamiento de este componente es exactamente idéntico al de manga solo que en este caso pasariamos en el link true ya que si es anime
 //(posteriormente veremos el para que se usa parametro true o false) y que la llamada a la api es en el endpoint de anime por el resto es lo mismo
-
+/**
+ * @description Este componente se encarga de mostrar los animes que devuelve la api
+ * @function
+ * @name TiraAnimePrueba
+ * @returns {JSX} JSX con los animes que nos devuelve la api.
+ */
 const TiraAnimePrueba = () => {
   const [datos, setDatos] = useState([]);
 

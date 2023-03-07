@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: PackAnime.js</title>
+    <title>JSDoc: Source: TiraAnimePrueba.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: PackAnime.js</h1>
+    <h1 class="page-title">Source: TiraAnimePrueba.js</h1>
 
     
 
@@ -26,32 +26,53 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import React from "react";
-import "./../css/PackAnime.css";
+            <pre class="prettyprint source linenums"><code>import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom"; // import Link component
+import PackAnime from "./PackAnime.js";
 
-//este es un componente simple que usaremos tanto en el listado como en la página de búsqueda
-//unicamente muestra una imagen y nombre que se le pasan como props
+//El comportamiento de este componente es exactamente idéntico al de manga solo que en este caso pasariamos en el link true ya que si es anime
+//(posteriormente veremos el para que se usa parametro true o false) y que la llamada a la api es en el endpoint de anime por el resto es lo mismo
 /**
+ * @description Este componente se encarga de mostrar los animes que devuelve la api
  * @function
- * @name PackAnime
- * @param {Object} props - Propiedades del componente.
- * @param {string} props.sauce - La URL de la imagen a mostrar.
- * @param {string} props.name - El nombre del anime o manga a mostrar.
- * @returns {JSX} 
- * @description  JSX con la imagen y el nombre del anime o manga.
+ * @name TiraAnimePrueba
+ * @returns {JSX} JSX con los animes que nos devuelve la api.
  */
-function PackAnime(props) {
+const TiraAnimePrueba = () => {
+  const [datos, setDatos] = useState([]);
 
-    return(
-        &lt;div className="packed">
-            &lt;img height="156" width="110" src={props.sauce} alt="la que sea" />
-            &lt;p className="slug">{props.name}&lt;/p>
-        &lt;/div>
-    );
-    
-}
+  useEffect(() => {
+    obtenerDatos();
+  }, []);
 
-export default PackAnime;
+  const obtenerDatos = async () => {
+    const data = await fetch("https://kitsu.io/api/edge/trending/anime");
+    const animes = await data.json();
+    setDatos(animes.data);
+  };
+
+  return (
+    &lt;div>
+      &lt;h1>Anime&lt;/h1>
+      {console.log(datos)}
+      &lt;ul>
+        {datos.map((anime) => (
+          &lt;li key={anime.id}>
+            &lt;Link
+              to={`/producto/true/${anime.id}`}>
+              &lt;PackAnime
+                sauce={anime.attributes.posterImage.tiny}
+                name={anime.attributes.canonicalTitle}
+              />
+            &lt;/Link>
+          &lt;/li>
+        ))}
+      &lt;/ul>
+    &lt;/div>
+  );
+};
+
+export default TiraAnimePrueba;
 </code></pre>
         </article>
     </section>

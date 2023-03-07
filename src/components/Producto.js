@@ -8,6 +8,12 @@ import Default from "./../images/tv.png";
 import "./../css/Producto.css";
 import Lack from "./../images/mobile/Home.svg";
 
+/**
+ * @description Este componente se encarga de mostrar la informacion de un anime o manga en concreto
+ * @function
+ * @name Producto
+ * @returns {JSX} JSX con la informacion del anime o manga.
+ */
 const Producto = () => {
     const [anime, setAnime] = useState({});
     const [isLoading, setIsLoading] = useState(true);

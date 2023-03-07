@@ -1,5 +1,8 @@
 import React from "react";
 import "../css/IndexMainKitsu.css";
+
+
+//en este componente tenemos simplemente un titulo con un enlace al listado, nada que destacar
 /**
  * @description Este componente se encarga de mostrar un título principal con un enlace para acceder al listado de manga y anime.
  * @function
@@ -7,7 +10,6 @@ import "../css/IndexMainKitsu.css";
  * @param {Object} props - Propiedades del componente.
  * @returns {JSX} JSX con el título principal y el enlace al listado.
  */
-//en este componente tenemos simplemente un titulo con un enlace al listado, nada que destacar
 function IndexMainKitsu(props) {
     return(
         <main className="main-principal">

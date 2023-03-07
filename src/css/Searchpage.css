@@ -9,7 +9,7 @@
 .SPmain{
     display:flex;
     flex-flow:column wrap;
-    overflow:scroll;
+    overflow:hidden;
     background-color:#BCD4DE;
     background-image: url(./../images/bgOpacity.png);
     height: 80vh;
@@ -29,4 +29,10 @@
     height: 30vh;
     position:absolute;
     bottom:10vh;
+    display: none;
+}
+
+.todos{
+    display: flex;
+    flex-flow: row wrap;
 }

@@ -3,7 +3,12 @@ import PackAnime from "./PackAnime.js";
 import { Link } from "react-router-dom"; // import Link component
 
 //en este componente por fin empezamos a llamar a la api en este caso seria al endpoint de manga y trending
-
+/**
+ * @description Este componente se encarga de los mangas que nos devuelve la api
+ * @function
+ * @name TiraMangaCrs
+ * @returns {JSX} JSX con los amngas que la api nos ha devuelto.
+ */
 const TiraMangaCrs = () => {
   const [datos, setDatos] = useState([])
  
